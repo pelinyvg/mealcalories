@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 mvnw
-mvnw.cmd
+mvnw.cmdpelinyvg
 
 ### STS ###
 .apt_generated
