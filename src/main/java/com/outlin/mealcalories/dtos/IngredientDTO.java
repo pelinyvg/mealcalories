@@ -1,21 +1,16 @@
-package com.outlin.mealcalories.models;
+package com.outlin.mealcalories.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
-@Table
-@Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Meal {
-    @Id
-    private Long id;
+public class IngredientDTO {
     private String name;
     private Double calorieIn100gr;
-    @OneToOne
-    private Amount amount;
+    private Double value;
+    private String unit;
+    private Long mealId;
 }
