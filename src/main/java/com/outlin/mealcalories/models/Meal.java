@@ -1,16 +1,20 @@
 package com.outlin.mealcalories.models;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table
 @Entity
-@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Meal {
     @Id
     private Long id;
+    private String name;
+    @OneToOne
+    private Amount amount;
 }
