@@ -1,5 +1,6 @@
 package com.outlin.mealcalories.services;
 
+import com.outlin.mealcalories.models.Meal;
 import com.outlin.mealcalories.repositories.MealRepository;
 import org.springframework.stereotype.Service;
 
@@ -10,5 +11,9 @@ public class MealService {
 
     public MealService(MealRepository mealRepository) {
         this.mealRepository = mealRepository;
+    }
+
+    public Meal createAmount(Meal meal) {
+        return mealRepository.save(meal);
     }
 }

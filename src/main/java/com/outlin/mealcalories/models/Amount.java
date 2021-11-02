@@ -4,9 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
@@ -15,6 +13,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 public class Amount {
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private Double value;
     private String unit;
