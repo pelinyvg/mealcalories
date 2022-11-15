@@ -26,16 +26,4 @@ public class IngredientAmount {
     @OneToOne
     @JoinColumn(name = "ingredient_id", referencedColumnName = "id")
     private Ingredient ingredient;
-
-    public Long getId() {
-        return id;
-    }
-
-    public Amount getAmount() {
-        return amount;
-    }
-
-    public Ingredient getIngredient() {
-        return ingredient;
-    }
 }
