@@ -26,4 +26,7 @@ public class IngredientAmount {
     @OneToOne
     @JoinColumn(name = "ingredient_id", referencedColumnName = "id")
     private Ingredient ingredient;
+    @ManyToOne
+    @JoinColumn(name = "recipe_id", referencedColumnName = "id")
+    private Recipe recipe;
 }

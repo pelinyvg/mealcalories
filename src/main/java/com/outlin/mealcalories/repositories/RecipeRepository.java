@@ -1,9 +1,9 @@
 package com.outlin.mealcalories.repositories;
 
-import com.outlin.mealcalories.models.Meal;
+import com.outlin.mealcalories.models.Recipe;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MealRepository extends JpaRepository<Meal, Long> {
+public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 }

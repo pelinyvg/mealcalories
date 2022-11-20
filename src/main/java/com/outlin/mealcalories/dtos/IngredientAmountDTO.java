@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class IngredientDTO {
-    private String name;
-    private Double calorieIn100gr;
+public class IngredientAmountDTO {
+	private IngredientDTO ingredient;
+	private AmountDTO amount;
 }

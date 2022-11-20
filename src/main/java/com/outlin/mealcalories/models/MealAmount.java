@@ -20,8 +20,12 @@ public class MealAmount {
     @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "calorie_total")
+    private Double calorieTotal;
     @OneToOne
+    @JoinColumn(name = "amount_id")
     private Amount amount;
     @OneToOne
-    private Meal meal;
+    @JoinColumn(name = "recipe_id")
+    private Recipe recipe;
 }

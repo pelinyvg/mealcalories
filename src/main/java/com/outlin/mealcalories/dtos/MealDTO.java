@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class MealDTO {
     private String name;
-    private Double calorieIn100gr;
-    private Double value;
-    private String unit;
+    private Double calorieTotal;
+    private AmountDTO amount;
+    private long recipe;
 }
