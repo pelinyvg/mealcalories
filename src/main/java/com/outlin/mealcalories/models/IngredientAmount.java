@@ -20,7 +20,7 @@ public class IngredientAmount {
     @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "amount_id", referencedColumnName = "id")
     private Amount amount;
     @OneToOne

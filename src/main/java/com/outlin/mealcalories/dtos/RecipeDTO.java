@@ -1,16 +1,15 @@
 package com.outlin.mealcalories.dtos;
 
-import com.outlin.mealcalories.models.IngredientAmount;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.OneToMany;
 import java.util.List;
 
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
 public class RecipeDTO {
-    private Long id;
     private String name;
     private Double calorieIn100gr;
-    private List<IngredientAmount> ingredientsWithAmounts;
+    private List<IngredientAmountDTO> ingredientsWithAmounts;
 }

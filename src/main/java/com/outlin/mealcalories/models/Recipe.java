@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
-@Table(name = "Meal")
+@Table(name = "recipe")
 @Entity
 @Builder
 @Getter
@@ -17,11 +17,11 @@ public class Recipe {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name")
+    @Column(name = "recipe_name")
     private String name;
     @Column(name = "calorie_in_100_gr")
     private Double calorieIn100gr;
-    @OneToMany(mappedBy = "recipe")
+    @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL)
     private List<IngredientAmount> ingredientsWithAmounts;
 }
 

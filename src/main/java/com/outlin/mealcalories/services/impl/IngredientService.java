@@ -1,4 +1,4 @@
-package com.outlin.mealcalories.services;
+package com.outlin.mealcalories.services.impl;
 
 import com.outlin.mealcalories.repositories.IngredientRepository;
 import org.springframework.stereotype.Service;

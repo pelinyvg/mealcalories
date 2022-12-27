@@ -1,15 +1,15 @@
 CREATE TABLE recipe
 (
     id             BIGSERIAL PRIMARY KEY NOT NULL,
-    name           VARCHAR(30)           NOT NULL,
-    calorie_in_100_gr DECIMAL               NOT NULL,
+    recipe_name           VARCHAR(30)           NOT NULL,
+    calorie_in_100_gr DECIMAL               NOT NULL
 );
 
 CREATE TABLE ingredient
 (
     id             BIGSERIAL PRIMARY KEY NOT NULL,
     name           VARCHAR(30)           NOT NULL,
-    calorie_in_100_gr DECIMAL               NOT NULL,
+    calorie_in_100_gr DECIMAL               NOT NULL
 );
 
 CREATE TABLE amount
